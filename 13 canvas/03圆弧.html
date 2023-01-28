@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvasId" width="1000" height="1000"></canvas>
+    </div>
+  </body>
+
+  <script>
+    // 获取画布
+    const [c1] = document.querySelectorAll('#canvasId')
+    // 获取画笔
+    const ctx = c1.getContext('2d')
+    //  圆 (圆心x，圆心y，半径，开始的角度，结束的角度，逆时针还是顺时针) arc绘制圆弧 默认顺时针
+    // ctx.beginPath()
+    // ctx.arc(300, 200, 50, 0, Math.PI / 4)
+    // ctx.fill()
+    // ctx.closePath()
+
+    // ctx.beginPath()
+    // ctx.arc(200, 200, 50, 0, Math.PI * 2)
+    // ctx.stroke()
+    // ctx.closePath()
+
+    // ctx.beginPath()
+    // ctx.arc(200, 200, 30, 0, Math.PI)
+    // ctx.stroke()
+    // ctx.closePath()
+
+    // ctx.beginPath()
+    // ctx.arc(185, 180, 5, 0, Math.PI * 2)
+    // ctx.stroke()
+    // ctx.closePath()
+
+    // ctx.beginPath()
+    // ctx.arc(200, 180, 5, 0, Math.PI * 2)
+    // ctx.stroke()
+    // ctx.closePath()
+
+    // move to
+    ctx.beginPath()
+    ctx.arc(300, 200, 50, 0, Math.PI / 4)
+    ctx.moveTo(250, 200)
+    ctx.arc(200, 200, 50, 0, Math.PI * 2)
+    ctx.moveTo(230, 200)
+    ctx.arc(200, 200, 30, 0, Math.PI)
+    ctx.moveTo(190, 180)
+    ctx.arc(185, 180, 5, 0, Math.PI * 2)
+    ctx.moveTo(205, 180)
+    ctx.arc(200, 180, 5, 0, Math.PI * 2)
+    ctx.stroke()
+    ctx.closePath()
+  </script>
+</html>

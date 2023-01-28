@@ -1,0 +1,7 @@
+wget 安装
+Cd移动文件夹
+Mkdir -p 创建文件夹
+Tar -xvf解压缩
+www.cookieduck.top
+
+临时密码amsymfjLu9%Y

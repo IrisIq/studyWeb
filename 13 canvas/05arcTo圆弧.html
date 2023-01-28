@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvasId" width="1000" height="1000"></canvas>
+    </div>
+  </body>
+
+  <script>
+    // 获取画布
+    const [c1] = document.querySelectorAll('#canvasId')
+    // 获取画笔
+    const ctx = c1.getContext('2d')
+
+    ctx.beginPath()
+    // 第一个点
+    ctx.moveTo(100, 100)
+    // 第二个点 第三个点和半径
+    ctx.arcTo(100, 150, 150, 150, 25)
+    ctx.stroke()
+
+    ctx.closePath()
+  </script>
+</html>

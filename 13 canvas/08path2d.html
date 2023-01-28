@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvasId" width="1000" height="1000"></canvas>
+    </div>
+  </body>
+
+  <script>
+    // 获取画布
+    const [c1] = document.querySelectorAll('#canvasId')
+    // 获取画笔
+    const ctx = c1.getContext('2d')
+
+    var hearPath = new Path2D()
+    // 三次曲线
+    hearPath.moveTo(300, 200)
+    // 第一个点 2个控制点 1个终点
+    hearPath.bezierCurveTo(350, 150, 400, 200, 300, 300)
+    hearPath.bezierCurveTo(200, 200, 250, 150, 300, 250)
+    ctx.stroke(hearPath)
+
+    var linePo = new Path2D('M10 10 h 80 v 80 h -80 z')
+    ctx.stroke(linePo)
+  </script>
+</html>

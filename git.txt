@@ -1,0 +1,30 @@
+Git init 创建新的git仓库
+git status 查看本地库状态
+Git add 文件 添加本地库
+git commit -m "first" vue-elementplus  提交到暂存区 ”版本号 “   / 冲突合并不带文件名
+
+Git reflog 查看版本信息
+Git log 查看版本详细信息
+
+版本穿梭
+Git reset --hard ****    ***:版本号  
+
+分支
+Git branch 分支名 创建分支
+Git branch-v 查看分支 
+Git checkout  分支名    切换分支
+Git merge 把指定的分支合并到当前分支上 
+
+创建远程库别名     
+Git remote -V 查看别名
+Git remote add 别名 链接 创建别名
+
+推送
+Git push 别名 分支
+
+拉取
+Git pull 别名 分支
+
+
+cd ~/.ssh
+cat id_rsa.pub

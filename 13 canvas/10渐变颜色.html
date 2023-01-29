@@ -15,6 +15,10 @@
   <script>
     // 获取画布
     const [c1] = document.querySelectorAll('#canvasId')
+    c1.onclick = function (e) {
+      console.log(1)
+      console.log(e)
+    }
     // 获取画笔
     const ctx = c1.getContext('2d')
 
@@ -28,12 +32,12 @@
     // ctx.fillStyle = lineObj
     // ctx.fillRect(0, 300, 600, 300)
     let index = 0
-
     function ani() {
-      if (index > 1) {
+      index += 0.005
+      if (index >= 1) {
         index = 0
       }
-      index += 0.005
+      console.log(index)
       ctx.clearRect(0, 0, 1000, 1000)
       let lineObj = ctx.createLinearGradient(0, 300, 600, 300)
       lineObj.addColorStop(0, 'pink')
